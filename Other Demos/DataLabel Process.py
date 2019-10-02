@@ -6,7 +6,7 @@ np.set_printoptions(suppress=True)
 
 
 def dataReader2(ncolsBegin, ncolsEnd, nrowsLength, stepLength, stepNumber):
-    data = xlrd.open_workbook('data.xlsx')
+    data = xlrd.open_workbook('finaldata.xlsx')
     table = data.sheet_by_name('Sheet1')
     data = []
     for r in range(ncolsBegin, ncolsEnd):
@@ -113,24 +113,24 @@ for n in range(10):
     names['dataGood' + str(n + 1) + 'C'] = pd.DataFrame(names['goodData' + str(n + 1) + 'C'])
     names['dataGood' + str(n + 1) + 'D'] = pd.DataFrame(names['goodData' + str(n + 1) + 'D'])
 for q in range(1, 3):
-    names['errorData' + 'A' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'A'])
-    names['errorData' + 'A' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'B'])
-    names['errorData' + 'A' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'C'])
-    names['errorData' + 'A' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'D'])
-    names['errorData' + 'B' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'A'])
-    names['errorData' + 'B' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'B'])
-    names['errorData' + 'B' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'C'])
-    names['errorData' + 'B' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'D'])
-    names['errorData' + 'C' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'A'])
-    names['errorData' + 'C' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'B'])
-    names['errorData' + 'C' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'C'])
-    names['errorData' + 'C' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'D'])
-    names['errorData' + 'D' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'A'])
-    names['errorData' + 'D' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'B'])
-    names['errorData' + 'D' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'C'])
-    names['errorData' + 'D' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'D'])
+    names['dataError' + 'A' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'A'])
+    names['dataError' + 'A' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'B'])
+    names['dataError' + 'A' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'C'])
+    names['dataError' + 'A' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'A' + str(q) + 'D'])
+    names['dataError' + 'B' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'A'])
+    names['dataError' + 'B' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'B'])
+    names['dataError' + 'B' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'C'])
+    names['dataError' + 'B' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'B' + str(q) + 'D'])
+    names['dataError' + 'C' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'A'])
+    names['dataError' + 'C' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'B'])
+    names['dataError' + 'C' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'C'])
+    names['dataError' + 'C' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'C' + str(q) + 'D'])
+    names['dataError' + 'D' + str(q) + 'A'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'A'])
+    names['dataError' + 'D' + str(q) + 'B'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'B'])
+    names['dataError' + 'D' + str(q) + 'C'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'C'])
+    names['dataError' + 'D' + str(q) + 'D'] = pd.DataFrame(names['errorData' + 'D' + str(q) + 'D'])
 #将好数据和坏数据转化成pandas索引表
-print(dataGood7A)
+
 for i in range(10):
     for x in range(1000):
         names['dataGood' + str(i + 1) + 'A'] = names['dataGood' + str(i + 1) + 'A'].rename(index={x: 1})
@@ -145,55 +145,62 @@ for i in range(10):
     #将标签转换为矩阵格式
 for q in range(1, 3):
     for x in range(1000):
-        names['errorData' + 'A' + str(q) + 'A'] = names['errorData' + 'A' + str(q) + 'A'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'A' + str(q) + 'A'] = names['dataError' + 'A' + str(q) + 'A'].rename(index={x: (q * 0.1 +
                                                                                                             0)})
-        names['errorData' + 'A' + str(q) + 'B'] = names['errorData' + 'A' + str(q) + 'B'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'A' + str(q) + 'B'] = names['dataError' + 'A' + str(q) + 'B'].rename(index={x: (q * 0.1 +
                                                                                                             0)})
-        names['errorData' + 'A' + str(q) + 'C'] = names['errorData' + 'A' + str(q) + 'C'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'A' + str(q) + 'C'] = names['dataError' + 'A' + str(q) + 'C'].rename(index={x: (q * 0.1 +
                                                                                                             0)})
-        names['errorData' + 'A' + str(q) + 'D'] = names['errorData' + 'A' + str(q) + 'D'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'A' + str(q) + 'D'] = names['dataError' + 'A' + str(q) + 'D'].rename(index={x: (q * 0.1 +
                                                                                                             0)})
-        names['errorData' + 'B' + str(q) + 'A'] = names['errorData' + 'B' + str(q) + 'A'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'B' + str(q) + 'A'] = names['dataError' + 'B' + str(q) + 'A'].rename(index={x: (q * 0.1 +
                                                                                                             0.2)})
-        names['errorData' + 'B' + str(q) + 'B'] = names['errorData' + 'B' + str(q) + 'B'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'B' + str(q) + 'B'] = names['dataError' + 'B' + str(q) + 'B'].rename(index={x: (q * 0.1 +
                                                                                                             0.2)})
-        names['errorData' + 'B' + str(q) + 'C'] = names['errorData' + 'B' + str(q) + 'C'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'B' + str(q) + 'C'] = names['dataError' + 'B' + str(q) + 'C'].rename(index={x: (q * 0.1 +
                                                                                                             0.2)})
-        names['errorData' + 'B' + str(q) + 'D'] = names['errorData' + 'B' + str(q) + 'D'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'B' + str(q) + 'D'] = names['dataError' + 'B' + str(q) + 'D'].rename(index={x: (q * 0.1 +
                                                                                                             0.2)})
-        names['errorData' + 'C' + str(q) + 'A'] = names['errorData' + 'C' + str(q) + 'A'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'C' + str(q) + 'A'] = names['dataError' + 'C' + str(q) + 'A'].rename(index={x: (q * 0.1 +
                                                                                                             0.4)})
-        names['errorData' + 'C' + str(q) + 'B'] = names['errorData' + 'C' + str(q) + 'B'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'C' + str(q) + 'B'] = names['dataError' + 'C' + str(q) + 'B'].rename(index={x: (q * 0.1 +
                                                                                                             0.4)})
-        names['errorData' + 'C' + str(q) + 'C'] = names['errorData' + 'C' + str(q) + 'C'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'C' + str(q) + 'C'] = names['dataError' + 'C' + str(q) + 'C'].rename(index={x: (q * 0.1 +
                                                                                                             0.4)})
-        names['errorData' + 'C' + str(q) + 'D'] = names['errorData' + 'C' + str(q) + 'D'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'C' + str(q) + 'D'] = names['dataError' + 'C' + str(q) + 'D'].rename(index={x: (q * 0.1 +
                                                                                                             0.4)})
-        names['errorData' + 'D' + str(q) + 'A'] = names['errorData' + 'D' + str(q) + 'A'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'D' + str(q) + 'A'] = names['dataError' + 'D' + str(q) + 'A'].rename(index={x: (q * 0.1 +
                                                                                                             0.6)})
-        names['errorData' + 'D' + str(q) + 'B'] = names['errorData' + 'D' + str(q) + 'B'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'D' + str(q) + 'B'] = names['dataError' + 'D' + str(q) + 'B'].rename(index={x: (q * 0.1 +
                                                                                                             0.6)})
-        names['errorData' + 'D' + str(q) + 'C'] = names['errorData' + 'D' + str(q) + 'C'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'D' + str(q) + 'C'] = names['dataError' + 'D' + str(q) + 'C'].rename(index={x: (q * 0.1 +
                                                                                                             0.6)})
-        names['errorData' + 'D' + str(q) + 'D'] = names['errorData' + 'D' + str(q) + 'D'].rename(index={x: (q * 0.1 +
+        names['dataError' + 'D' + str(q) + 'D'] = names['dataError' + 'D' + str(q) + 'D'].rename(index={x: (q * 0.1 +
                                                                                                             0.6)})
-    names['errorLabel' + 'A' + str(q) + 'A'] = np.array(names['errorData' + 'A' + str(q) + 'A'].index)
-    names['errorLabel' + 'A' + str(q) + 'B'] = np.array(names['errorData' + 'A' + str(q) + 'B'].index)
-    names['errorLabel' + 'A' + str(q) + 'C'] = np.array(names['errorData' + 'A' + str(q) + 'C'].index)
-    names['errorLabel' + 'A' + str(q) + 'D'] = np.array(names['errorData' + 'A' + str(q) + 'D'].index)
-    names['errorLabel' + 'B' + str(q) + 'A'] = np.array(names['errorData' + 'B' + str(q) + 'A'].index)
-    names['errorLabel' + 'B' + str(q) + 'B'] = np.array(names['errorData' + 'B' + str(q) + 'B'].index)
-    names['errorLabel' + 'B' + str(q) + 'C'] = np.array(names['errorData' + 'B' + str(q) + 'C'].index)
-    names['errorLabel' + 'B' + str(q) + 'D'] = np.array(names['errorData' + 'B' + str(q) + 'D'].index)
-    names['errorLabel' + 'C' + str(q) + 'A'] = np.array(names['errorData' + 'C' + str(q) + 'A'].index)
-    names['errorLabel' + 'C' + str(q) + 'B'] = np.array(names['errorData' + 'C' + str(q) + 'B'].index)
-    names['errorLabel' + 'C' + str(q) + 'C'] = np.array(names['errorData' + 'C' + str(q) + 'C'].index)
-    names['errorLabel' + 'C' + str(q) + 'D'] = np.array(names['errorData' + 'C' + str(q) + 'D'].index)
-    names['errorLabel' + 'D' + str(q) + 'A'] = np.array(names['errorData' + 'D' + str(q) + 'A'].index)
-    names['errorLabel' + 'D' + str(q) + 'B'] = np.array(names['errorData' + 'D' + str(q) + 'B'].index)
-    names['errorLabel' + 'D' + str(q) + 'C'] = np.array(names['errorData' + 'D' + str(q) + 'C'].index)
-    names['errorLabel' + 'D' + str(q) + 'D'] = np.array(names['errorData' + 'D' + str(q) + 'D'].index)
-
-print(errorDataA1A)
-print(errorLabelA1A)
+    #每种不同的故障用0-1之间不同的数做标签
+    names['errorLabel' + 'A' + str(q) + 'A'] = np.array(names['dataError' + 'A' + str(q) + 'A'].index)
+    names['errorLabel' + 'A' + str(q) + 'B'] = np.array(names['dataError' + 'A' + str(q) + 'B'].index)
+    names['errorLabel' + 'A' + str(q) + 'C'] = np.array(names['dataError' + 'A' + str(q) + 'C'].index)
+    names['errorLabel' + 'A' + str(q) + 'D'] = np.array(names['dataError' + 'A' + str(q) + 'D'].index)
+    names['errorLabel' + 'B' + str(q) + 'A'] = np.array(names['dataError' + 'B' + str(q) + 'A'].index)
+    names['errorLabel' + 'B' + str(q) + 'B'] = np.array(names['dataError' + 'B' + str(q) + 'B'].index)
+    names['errorLabel' + 'B' + str(q) + 'C'] = np.array(names['dataError' + 'B' + str(q) + 'C'].index)
+    names['errorLabel' + 'B' + str(q) + 'D'] = np.array(names['dataError' + 'B' + str(q) + 'D'].index)
+    names['errorLabel' + 'C' + str(q) + 'A'] = np.array(names['dataError' + 'C' + str(q) + 'A'].index)
+    names['errorLabel' + 'C' + str(q) + 'B'] = np.array(names['dataError' + 'C' + str(q) + 'B'].index)
+    names['errorLabel' + 'C' + str(q) + 'C'] = np.array(names['dataError' + 'C' + str(q) + 'C'].index)
+    names['errorLabel' + 'C' + str(q) + 'D'] = np.array(names['dataError' + 'C' + str(q) + 'D'].index)
+    names['errorLabel' + 'D' + str(q) + 'A'] = np.array(names['dataError' + 'D' + str(q) + 'A'].index)
+    names['errorLabel' + 'D' + str(q) + 'B'] = np.array(names['dataError' + 'D' + str(q) + 'B'].index)
+    names['errorLabel' + 'D' + str(q) + 'C'] = np.array(names['dataError' + 'D' + str(q) + 'C'].index)
+    names['errorLabel' + 'D' + str(q) + 'D'] = np.array(names['dataError' + 'D' + str(q) + 'D'].index)
+#提取格式：好数据array格式goodData<数字><模块>;坏数据array格式errorData<模块><数字><模块>；
+#好数据标签goodLabel<数字><模块>;坏数据标签errorLabel<模块><数字><模块>
+#好数据后缀表示第<数字>好数据的哪个<模块>的电压数据；坏数据后缀表示哪个<模块>的第<数字>个管子故障时哪个<模块>的电压数据
+#ex:
+print(dataGood7A)#第七次好数据的A模块电压数据
+print(errorDataA1A)#A模块第一个ijbt故障时A模块的电压数据
+print(goodLabel2A)#第二次好数据A模块电压数据的标签
+print(errorLabelA2A)#A模块第一个ijbt故障时A模块电压数据的标签
+#红色没问题！！！能用的
 
