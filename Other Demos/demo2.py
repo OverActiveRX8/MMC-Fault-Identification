@@ -1,89 +1,36 @@
-goodData1A = dataReader2(ncolsBegin=1, ncolsEnd=2, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData1B = dataReader2(ncolsBegin=2, ncolsEnd=3, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData1C = dataReader2(ncolsBegin=3, ncolsEnd=4, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData1D = dataReader2(ncolsBegin=4, ncolsEnd=5, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData2A = dataReader2(ncolsBegin=6, ncolsEnd=7, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData2B = dataReader2(ncolsBegin=7, ncolsEnd=8, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData2C = dataReader2(ncolsBegin=8, ncolsEnd=9, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData2D = dataReader2(ncolsBegin=9, ncolsEnd=10, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA1A = dataReader2(ncolsBegin=11, ncolsEnd=12, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA1B = dataReader2(ncolsBegin=12, ncolsEnd=13, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA1C = dataReader2(ncolsBegin=13, ncolsEnd=14, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA1D = dataReader2(ncolsBegin=14, ncolsEnd=15, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData3A = dataReader2(ncolsBegin=16, ncolsEnd=17, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData3B = dataReader2(ncolsBegin=17, ncolsEnd=18, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData3C = dataReader2(ncolsBegin=18, ncolsEnd=19, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData3D = dataReader2(ncolsBegin=19, ncolsEnd=20, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA2A = dataReader2(ncolsBegin=21, ncolsEnd=22, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA2B = dataReader2(ncolsBegin=22, ncolsEnd=23, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA2C = dataReader2(ncolsBegin=23, ncolsEnd=24, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataA2D = dataReader2(ncolsBegin=24, ncolsEnd=25, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData4A = dataReader2(ncolsBegin=26, ncolsEnd=27, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData4B = dataReader2(ncolsBegin=27, ncolsEnd=28, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData4C = dataReader2(ncolsBegin=28, ncolsEnd=29, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData4D = dataReader2(ncolsBegin=29, ncolsEnd=30, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB1A = dataReader2(ncolsBegin=31, ncolsEnd=32, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB1B = dataReader2(ncolsBegin=32, ncolsEnd=33, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB1C = dataReader2(ncolsBegin=33, ncolsEnd=34, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB1D = dataReader2(ncolsBegin=34, ncolsEnd=35, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData5A = dataReader2(ncolsBegin=36, ncolsEnd=37, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData5B = dataReader2(ncolsBegin=37, ncolsEnd=38, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData5C = dataReader2(ncolsBegin=38, ncolsEnd=39, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData5D = dataReader2(ncolsBegin=39, ncolsEnd=40, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB2A = dataReader2(ncolsBegin=41, ncolsEnd=42, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB2B = dataReader2(ncolsBegin=42, ncolsEnd=43, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB2C = dataReader2(ncolsBegin=43, ncolsEnd=44, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataB2D = dataReader2(ncolsBegin=44, ncolsEnd=45, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData6A = dataReader2(ncolsBegin=46, ncolsEnd=47, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData6B = dataReader2(ncolsBegin=47, ncolsEnd=48, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData6C = dataReader2(ncolsBegin=48, ncolsEnd=49, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData6D = dataReader2(ncolsBegin=49, ncolsEnd=50, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC1A = dataReader2(ncolsBegin=51, ncolsEnd=52, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC1B = dataReader2(ncolsBegin=52, ncolsEnd=53, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC1C = dataReader2(ncolsBegin=53, ncolsEnd=54, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC1D = dataReader2(ncolsBegin=54, ncolsEnd=55, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData7A = dataReader2(ncolsBegin=56, ncolsEnd=57, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData7B = dataReader2(ncolsBegin=57, ncolsEnd=58, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData7C = dataReader2(ncolsBegin=58, ncolsEnd=59, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData7D = dataReader2(ncolsBegin=59, ncolsEnd=60, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC2A = dataReader2(ncolsBegin=61, ncolsEnd=62, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC2B = dataReader2(ncolsBegin=62, ncolsEnd=63, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC2C = dataReader2(ncolsBegin=63, ncolsEnd=64, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataC2D = dataReader2(ncolsBegin=64, ncolsEnd=65, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData8A = dataReader2(ncolsBegin=66, ncolsEnd=67, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData8B = dataReader2(ncolsBegin=67, ncolsEnd=68, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData8C = dataReader2(ncolsBegin=68, ncolsEnd=69, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData8D = dataReader2(ncolsBegin=69, ncolsEnd=70, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD1A = dataReader2(ncolsBegin=71, ncolsEnd=72, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD1B = dataReader2(ncolsBegin=72, ncolsEnd=73, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD1C = dataReader2(ncolsBegin=73, ncolsEnd=74, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD1D = dataReader2(ncolsBegin=74, ncolsEnd=75, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData9A = dataReader2(ncolsBegin=76, ncolsEnd=77, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData9B = dataReader2(ncolsBegin=77, ncolsEnd=78, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData9C = dataReader2(ncolsBegin=78, ncolsEnd=79, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData9D = dataReader2(ncolsBegin=79, ncolsEnd=80, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD2A = dataReader2(ncolsBegin=81, ncolsEnd=82, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD2B = dataReader2(ncolsBegin=82, ncolsEnd=83, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD2C = dataReader2(ncolsBegin=83, ncolsEnd=84, nrowsLength=100, stepLength=1, stepNumber=1000)
-errorDataD2D = dataReader2(ncolsBegin=84, ncolsEnd=85, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData10A = dataReader2(ncolsBegin=86, ncolsEnd=87, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData10B = dataReader2(ncolsBegin=87, ncolsEnd=88, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData10C = dataReader2(ncolsBegin=88, ncolsEnd=89, nrowsLength=100, stepLength=1, stepNumber=1000)
-goodData10D = dataReader2(ncolsBegin=89, ncolsEnd=90, nrowsLength=100, stepLength=1, stepNumber=1000)
-
-    names['errorData' + 'A' + str(q) + 'A']
-    names['errorData' + 'A' + str(q) + 'B']
-    names['errorData' + 'A' + str(q) + 'C']
-    names['errorData' + 'A' + str(q) + 'D']
-    names['errorData' + 'B' + str(q) + 'A']
-    names['errorData' + 'B' + str(q) + 'B']
-    names['errorData' + 'B' + str(q) + 'C']
-    names['errorData' + 'B' + str(q) + 'D']
-    names['errorData' + 'C' + str(q) + 'A']
-    names['errorData' + 'C' + str(q) + 'B']
-    names['errorData' + 'C' + str(q) + 'C']
-    names['errorData' + 'C' + str(q) + 'D']
-    names['errorData' + 'D' + str(q) + 'A']
-    names['errorData' + 'D' + str(q) + 'B']
-    names['errorData' + 'D' + str(q) + 'C']
-    names['errorData' + 'D' + str(q) + 'D']
+import numpy as np
+import xlrd
+import random
+def dataReader2(ncolsBegin, ncolsEnd, nrowsLength, stepNumber, nrowsBegin, setLabel, interval):
+    data = xlrd.open_workbook('finaldata.xlsx')
+    table = data.sheet_by_name('Sheet1')
+    data = []
+    useLabel = []
+    while True:
+        if nrowsBegin % interval < 7:
+            label = [setLabel]
+            for c in range(nrowsBegin, nrowsBegin + nrowsLength):
+                for r in range(ncolsBegin, ncolsEnd):
+                    val = []
+                    val.append(table.cell_value(c, r))
+                    data.append(tuple(val))
+            useLabel.append(tuple(label))
+        else:
+            label = [abs(setLabel - 1)]
+            for c in range(nrowsBegin, nrowsBegin + nrowsLength):
+                for r in range(ncolsBegin + 5, ncolsEnd + 5):
+                    val = []
+                    val.append(table.cell_value(c, r))
+                    data.append(tuple(val))
+            useLabel.append(tuple(label))
+        nrowsBegin = nrowsBegin + 1
+        if nrowsBegin == stepNumber:
+            break
+    labelNumpyYype = np.r_[useLabel]
+    dataNumpyType = np.r_[data]
+    data = np.reshape(dataNumpyType, (stepNumber, nrowsLength, ncolsEnd - ncolsBegin), order='C')
+    useLabel = np.reshape(labelNumpyYype, (stepNumber, 1), order='C')
+    dataLabel = ((data,) + (label,))
+    return dataLabel
+good = dataReader2(ncolsBegin=1, ncolsEnd=5, nrowsLength=100, stepNumber=1000, nrowsBegin=0, setLabel=0, interval=10)
+a = good[0]
